@@ -74,3 +74,9 @@ Run the first Python node:
 ```bash
 ros2 run my_py_pkg my_first_py_node
 ```
+
+Run the first C++ node:
+
+```bash
+ros2 run my_cpp_pkg my_first_node
+```
