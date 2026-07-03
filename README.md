@@ -83,7 +83,7 @@ ros2 run my_cpp_pkg my_first_node
 
 ---
 
-## 5b. Publisher / Subscriber Example
+## 5b. Publisher / Subscriber — Python (`my_py_pkg`)
 
 **Terminal 1** — Run the publisher (robot_news_station):
 
@@ -97,6 +97,32 @@ Publishes a `String` message on the `/robot_news` topic every 1 second.
 
 ```bash
 ros2 run my_py_pkg smartphone
+```
+
+Subscribes to `/robot_news` and prints every received message.
+
+**Verify the topic:**
+
+```bash
+ros2 topic echo /robot_news
+```
+
+---
+
+## 5c. Publisher / Subscriber — C++ (`my_cpp_pkg`)
+
+**Terminal 1** — Run the publisher (robot_news_station):
+
+```bash
+ros2 run my_cpp_pkg robot_news_station
+```
+
+Publishes a `String` message on the `/robot_news` topic every 1 second.
+
+**Terminal 2** — Run the subscriber (smartphone):
+
+```bash
+ros2 run my_cpp_pkg smartphone
 ```
 
 Subscribes to `/robot_news` and prints every received message.
