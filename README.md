@@ -80,3 +80,16 @@ Run the first C++ node:
 ```bash
 ros2 run my_cpp_pkg my_first_node
 ```
+
+---
+
+## 6. Useful Commands
+
+| Command | Description |
+|---|---|
+| `ros2 interface show example_interfaces/msg/String` | Show the fields and types of a ROS2 message interface |
+| `colcon build --packages-select my_cpp_pkg --symlink-install` | Build a specific package; `--symlink-install` avoids rebuilding for Python/script changes |
+| `ros2 node list` | List all active ROS2 nodes |
+| `ros2 node info /robot_news_station` | Show details of a node: publishers, subscribers, services |
+| `ros2 topic list` | List all active ROS2 topics |
+| `ros2 topic echo /robot_news` | Print messages published on a topic in real time |
