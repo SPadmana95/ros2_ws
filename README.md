@@ -145,3 +145,7 @@ ros2 topic echo /robot_news
 | `ros2 node info /robot_news_station` | Show details of a node: publishers, subscribers, services |
 | `ros2 topic list` | List all active ROS2 topics |
 | `ros2 topic echo /robot_news` | Print messages published on a topic in real time |
+| `ros2 topic info /robot_news` | Show topic type and number of publishers/subscribers |
+| `ros2 topic hz /robot_news` | Display the publishing rate of a topic in Hz |
+| `ros2 topic bw /robot_news` | Display the bandwidth (bytes/sec) consumed by a topic |
+| `ros2 topic pub -r 5 /robot_news example_interfaces/msg/String "{data: 'hello from the terminal'}"` | Publish a message manually to a topic at 5 Hz from the terminal |
