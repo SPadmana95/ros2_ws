@@ -149,3 +149,6 @@ ros2 topic echo /robot_news
 | `ros2 topic hz /robot_news` | Display the publishing rate of a topic in Hz |
 | `ros2 topic bw /robot_news` | Display the bandwidth (bytes/sec) consumed by a topic |
 | `ros2 topic pub -r 5 /robot_news example_interfaces/msg/String "{data: 'hello from the terminal'}"` | Publish a message manually to a topic at 5 Hz from the terminal |
+| `ros2 run my_py_pkg robot_news_station --ros-args -r __node:=my_station` | Remap the node name at runtime to `my_station` |
+| `ros2 run my_py_pkg robot_news_station --ros-args -r __node:=my_station -r robot_news:=abc` | Remap node name and topic name (`robot_news` → `abc`) at runtime |
+| `ros2 run my_py_pkg smartphone --ros-args -r robot_news:=abc` | Remap subscriber topic to `abc` to match the remapped publisher |
