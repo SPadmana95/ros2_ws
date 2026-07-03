@@ -135,6 +135,32 @@ ros2 topic echo /robot_news
 
 ---
 
+## 5d. Service Server / Client Example
+
+**Terminal 1** — Run the service server:
+
+```bash
+ros2 run my_py_pkg add_two_ints_server
+```
+
+Starts the `add_two_ints` service that takes two integers and returns their sum.
+
+**Terminal 2** — Call the service from the terminal:
+
+```bash
+ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts "{a: 3, b: 7}"
+```
+
+Expected response: `sum: 10`
+
+**Inspect the service interface:**
+
+```bash
+ros2 interface show example_interfaces/srv/AddTwoInts
+```
+
+---
+
 ## 6. Useful Commands
 
 | Command | Description |
@@ -152,3 +178,5 @@ ros2 topic echo /robot_news
 | `ros2 run my_py_pkg robot_news_station --ros-args -r __node:=my_station` | Remap the node name at runtime to `my_station` |
 | `ros2 run my_py_pkg robot_news_station --ros-args -r __node:=my_station -r robot_news:=abc` | Remap node name and topic name (`robot_news` → `abc`) at runtime |
 | `ros2 run my_py_pkg smartphone --ros-args -r robot_news:=abc` | Remap subscriber topic to `abc` to match the remapped publisher |
+| `ros2 interface show example_interfaces/srv/AddTwoInts` | Show the request/response fields of the AddTwoInts service interface |
+| `ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts "{a: 3, b: 7}"` | Manually call a service from the terminal with request values |
