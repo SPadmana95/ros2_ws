@@ -135,7 +135,7 @@ ros2 topic echo /robot_news
 
 ---
 
-## 5d. Service Server / Client Example
+## 5d. Service Server / Client — Python (`my_py_pkg`)
 
 **Terminal 1** — Run the service server:
 
@@ -170,6 +170,24 @@ ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts "{a: 3, b: 7}"
 ```bash
 ros2 interface show example_interfaces/srv/AddTwoInts
 ```
+
+---
+
+## 5e. Service Server / Client — C++ (`my_cpp_pkg`)
+
+**Terminal 1** — Run the C++ service server:
+
+```bash
+ros2 run my_cpp_pkg add_two_ints_server
+```
+
+**Terminal 2** — Run the C++ non-OOP client (hardcoded: a=5, b=3):
+
+```bash
+ros2 run my_cpp_pkg add_two_ints_client_no_oop
+```
+
+Expected output: `Result: 8`
 
 ---
 
