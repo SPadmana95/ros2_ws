@@ -181,7 +181,13 @@ ros2 interface show example_interfaces/srv/AddTwoInts
 ros2 run my_cpp_pkg add_two_ints_server
 ```
 
-**Terminal 2** — Run the C++ non-OOP client (hardcoded: a=5, b=3):
+**Terminal 2 (Option A)** — Run the C++ OOP client:
+
+```bash
+ros2 run my_cpp_pkg add_two_ints_client
+```
+
+**Terminal 2 (Option B)** — Run the C++ non-OOP client (hardcoded: a=5, b=3):
 
 ```bash
 ros2 run my_cpp_pkg add_two_ints_client_no_oop
