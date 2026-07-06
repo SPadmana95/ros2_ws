@@ -145,7 +145,13 @@ ros2 run my_py_pkg add_two_ints_server
 
 Starts the `add_two_ints` service that takes two integers and returns their sum.
 
-**Terminal 2** — Run the service client (pass values at runtime):
+**Terminal 2 (Option A)** — Run the OOP client (hardcoded calls: 3+5, 7+8, 12+15):
+
+```bash
+ros2 run my_py_pkg add_two_ints_client
+```
+
+**Terminal 2 (Option B)** — Run the non-OOP client (pass values at runtime):
 
 ```bash
 ros2 run my_py_pkg add_two_ints_client_without_oop 3 7
